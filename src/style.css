@@ -1,0 +1,39 @@
+.img-pokemon {
+    background: #c7ffff2e;
+    height: 50%;
+}
+
+.name-pokemon{
+
+    text-transform: capitalize;
+
+}
+
+a{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+
+.link-api{
+    color:black !important;
+}
+.tipo-pokemon{
+    
+    display: flex;
+    gap: 10px;
+}
+
+.tipo-p{
+    display: flex;
+    gap: 10px;
+    background-color: rgb(97 158 230);
+    padding: 5px 12px;
+    border-radius: 10px;
+
+}
+
+.color-btn{
+    background-color: #ff9600d6 !important;
+    border-style: none !important;
+}
