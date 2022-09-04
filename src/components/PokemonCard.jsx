@@ -8,7 +8,7 @@ import NavBar from './NavBar';
 import '../style.css'
 
 
-function PokemonCard(props) {
+export function PokemonCard(props) {
 
     const [pokemon, setPokemon] = useState([]);
     const [pokemonEvolution, setPokemonEvolution] = useState([]);
@@ -93,7 +93,7 @@ function PokemonCard(props) {
                         </div>
 
                     </Card.Text>
-                    <div className='text-center mt-4'><Link to={'/pokemon-a/' + id}><Button className="w-100 color-btn" variant="info">Ver pokemon!</Button></Link></div>
+                    
 
                 </Card.Body>
             </Card>
@@ -101,4 +101,3 @@ function PokemonCard(props) {
     )
 }
 
-export default PokemonCard

@@ -11,7 +11,7 @@ describe('Prueba de componenete PokemonCard', () => {
 
     render(<PokemonCardF evolucion={"s"} id={"value.id_pokemon"} image={"value.imagen"} nombre={"value.nombre"} tipo={"value.tipo"} />);
   
-    test('Test para validar la obtención de datos API para tarjeta pokemon', () => {
+    test('Test para validar la obtención de datos FireStore para tarjeta pokemon', () => {
         const evolucion = screen.getAllByText("value.nombre");
         expect(evolucion).toBeInTheDocument;
 

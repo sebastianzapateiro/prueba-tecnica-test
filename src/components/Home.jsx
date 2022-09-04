@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
-import PokemonCard from './PokemonCard'
-import PokemonCardF from './PokemonCardF'
+import {PokemonCard} from './PokemonCard'
+import {PokemonCardF} from './PokemonCardF'
 import Container from 'react-bootstrap/Container';
 import NavBar from './NavBar';
 
