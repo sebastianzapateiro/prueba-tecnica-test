@@ -7,7 +7,7 @@ import { doc, deleteDoc } from "firebase/firestore";
 import NavBar from './NavBar';
 import { db } from '../firebase-config';
 
-function DescriptionPokemonF() {
+export function DescriptionPokemonF() {
 
   const [pokemonDatosS, setPokemonDatosS] = useState([]);
   const [pokemonDatos, setPokemonDatos] = useState([]);
@@ -17,7 +17,7 @@ function DescriptionPokemonF() {
   let { name } = useParams();
 
   
-let navigate = useNavigate();
+
 
 const eliminarPokemon = async () =>{
   await deleteDoc(doc(db, "pokemon", name));
@@ -27,7 +27,7 @@ const eliminarPokemon = async () =>{
 
 const deletePokemon = ()=>{
    eliminarPokemon();
-   return navigate('/home')
+   /* return navigate('/home') */
   }
 
   async function getDataF() {
@@ -54,7 +54,7 @@ const deletePokemon = ()=>{
 
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
 
       <Container className='mt-5'>
 
@@ -86,8 +86,8 @@ const deletePokemon = ()=>{
                   {datapokemonF[0]?.egg}
                 </span></div>
 <div className='d-flex'>
-<div className='text-center mt-4'><Link to={'/edit-pokemon/' + name}><Button variant="primary">Editar pokemon!</Button></Link></div>
-<div className='text-center mt-4'><Button onClick={deletePokemon} variant="primary">Eliminar pokemon!</Button></div>
+{/* <div className='text-center mt-4'><Link to={'/edit-pokemon/' + name}><Button variant="primary">Editar pokemon!</Button></Link></div>
+<div className='text-center mt-4'><Button onClick={deletePokemon} variant="primary">Eliminar pokemon!</Button></div> */}
 </div>
               
 
@@ -101,4 +101,3 @@ const deletePokemon = ()=>{
   )
 }
 
-export default DescriptionPokemonF

@@ -7,7 +7,7 @@ import NavBar from './NavBar';
 import { motion } from "framer-motion";
 
 
-function DescriptionPokemon() {
+export function DescriptionPokemon() {
 
   const [pokemonDatosS, setPokemonDatosS] = useState([]);
   const [pokemonDatos, setPokemonDatos] = useState([]);
@@ -50,7 +50,7 @@ function DescriptionPokemon() {
   return (
 
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <motion.div initial={{opacity:0}} animate={{padding:100, opacity:1}} transition={{ duration: 0.4 }}
       >
         <Container  className='mt-5'>
@@ -69,12 +69,18 @@ function DescriptionPokemon() {
 
                 </p>
 
-                <div><span>Tipos: </span>
-                  {pokemonDatos.types?.map((tipo, llave) => (
-                    <span key={llave} >{tipo.type.name}&nbsp;</span>
-                  ))
-                  }
-                </div>
+
+                <div className='tipo-pokemon'>
+                            
+                            {pokemonDatos.types?.map((tipo, llave) => (
+                                <div className='tipo-p'>
+                                    <img src={`/src/assets/icons-types/${tipo.type.name}.svg`} ></img>
+                                    <span key={llave} >{tipo.type.name}&nbsp;</span>
+                                </div>
+                            ))
+                            }
+                        </div>
+
                 <div><span>Altura: </span><span>{pokemonDatos?.height}</span></div>
                 <div><span>Peso: </span><span>{pokemonDatos?.weight}</span></div>
                 <div><span>Abilidades: </span>{pokemonDatos.abilities?.map((tipo, llave) => (
@@ -97,4 +103,3 @@ function DescriptionPokemon() {
   )
 }
 
-export default DescriptionPokemon
